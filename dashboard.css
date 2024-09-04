@@ -1,0 +1,282 @@
+.container{
+    display: grid;
+    height: 100vh;
+    width:100vw;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+
+.dashboard{
+    grid-column: 1/2;
+    grid-row: 1/6;
+    background-color: rgba(32, 178, 170);
+    color: white;
+    
+}
+
+.top{
+    grid-column: 2/6;
+    grid-row:1/1;
+    background-color: white;
+}
+
+.main-page{
+    grid-column: 2/6;
+    grid-row: 2/6;
+    background-color: aliceblue;
+
+}
+
+h3{
+    align-self: center;
+    padding-right: 30px;
+    font-size: x-large;
+}
+
+.dashboard-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    word-spacing:10px;
+    background-color: inherit;
+    border: none;
+    border-radius: 8px;
+    color: inherit;
+}
+
+button:hover{
+    background-color: rgba(40, 190, 175);
+}
+
+.section2{
+    margin-top: 100px;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+}
+
+.top1{
+    display: flex;
+    width: inherit;
+    height: 50%;
+    align-items: center;
+}
+
+#search{
+    padding-left: 30px;
+    padding-right: 10px;
+    color: rgba(40, 190, 175);
+}
+
+#searchbar{
+    width: 50%;
+    height: 23%;
+    border: none;
+    border-radius: 8px;
+    background-color: aliceblue;
+}
+
+#notifications{
+    display: flex;
+    height: 24%;
+    width: 3%;
+    margin-left:20%;
+    color: rgba(40, 190, 175);
+}
+
+#profile{
+width: 5%;
+color: rgba(40, 190, 175);
+}
+
+#notifications:hover, #profile:hover{
+    color: rgba(60, 220, 195);
+    background-color: white;
+    
+}
+
+
+.user{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    margin-left: 3%;
+}
+
+
+.top2{
+    display: flex;
+    align-items: center;
+    width:inherit;
+    height: 50%;
+}
+
+#profile2{
+    width:5%;
+    color: rgba(40, 190, 175);
+    padding-left: 30px;
+}
+
+.greet{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 2%;
+    flex-grow: 1;
+}
+
+.user-text{
+    font-size: 25px;
+}
+
+.newBtn, .uploadBtn, .shareBtn{
+    display: flex;
+    width: 8%;
+    height: 40%;
+    justify-content: center;
+    color: rgba(40, 190, 175);
+    margin-right: 2%;
+    background-color:rgba(40, 190, 175);
+    color: white;
+    border-radius: 15px;
+}
+
+.shareBtn{
+    margin-right: 8%;
+}
+
+.newBtn:hover, .uploadBtn:hover, .shareBtn:hover{
+    background-color: rgba(50, 200, 195);;
+}
+
+.newBtn:active, .uploadBtn:active, .shareBtn:active{
+    border: 3px solid rgba(40, 170, 145);
+}
+
+
+
+.main-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 5% 1fr 1fr 1fr;
+    height: 100vh;
+    gap:2%;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+
+}
+.projects{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 700;
+}
+
+.announcements-text{
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    align-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 700;
+}
+
+.island1{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.island-buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+}
+.favourite, .view, .share{
+    width: 10%;
+}
+
+
+.island2{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.island3{
+    grid-column: 1;
+    grid-row: 3;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.island4{
+    grid-column: 2;
+    grid-row: 3;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.island5{
+    grid-column: 1;
+    grid-row: 4;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.island6{
+    grid-column: 2;
+    grid-row: 4;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.announcements{
+    background-color: white;
+    grid-column: 3;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr 3fr 1fr 3fr;
+}
+
+.sidebar-top{
+    grid-row: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.text1{
+    grid-row: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    padding-left: 5px;
+}
+
+
+
