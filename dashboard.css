@@ -12,6 +12,7 @@
     grid-row: 1/6;
     background-color: rgba(32, 178, 170);
     color: white;
+    height: 120%;
     
 }
 
@@ -168,18 +169,25 @@ color: rgba(40, 190, 175);
 
 .main-page{
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 5% 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 7% 1fr 0.5fr 0.25fr 0.25fr 1fr;
+    grid-template-areas: 
+    "projects . announcements-text"
+    "island1 island2 announcements"
+    "island3 island4 announcements"
+    "island3 island4 trending-text"
+    "island3 island4 trending"
+    "island5 island6 trending";
+    ;
     height: 100vh;
-    gap:2%;
+    gap:9px 18px;
     padding-left: 10px;
     font-family: Arial, Helvetica, sans-serif;
     overflow: auto;
 
 }
 .projects{
-    grid-column: 1;
-    grid-row: 1;
+    grid-area: projects;
     display: flex;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -188,8 +196,7 @@ color: rgba(40, 190, 175);
 }
 
 .announcements-text{
-    grid-column: 3;
-    grid-row: 1;
+    grid-area: announcements-text;
     display: flex;
     align-self: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -198,72 +205,98 @@ color: rgba(40, 190, 175);
 }
 
 .island1{
-    grid-column: 1;
-    grid-row: 2;
+    grid-area: island1;
     background-color: white;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
 }
 
 .island-buttons{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
-    
+    color: rgba(40, 190, 175);
 }
+
 .favourite, .view, .share{
     width: 10%;
 }
 
+.favourite:hover, .view:hover, .share:hover{
+    width: 10%;
+    color: rgba(60, 220, 195);
+    background-color: white;
+}
+
+.favourite:active, .view:active, .share:active{
+    width: 10%;
+    color: rgba(60, 220, 195);
+    background-color: white;
+    transform: translateY(2px);
+}
+
+
 
 .island2{
-    grid-column: 2;
-    grid-row: 2;
+    grid-area: island2;
     padding: 5px;
     background-color: white;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .island3{
-    grid-column: 1;
-    grid-row: 3;
+    grid-area: island3;
     padding: 5px;
     background-color: white;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .island4{
-    grid-column: 2;
-    grid-row: 3;
+    grid-area:island4;
     background-color: white;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .island5{
-    grid-column: 1;
-    grid-row: 4;
+    grid-area:island5;
     background-color: white;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .island6{
-    grid-column: 2;
-    grid-row: 4;
+    grid-area:island6;
     background-color: white;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .announcements{
     background-color: white;
     grid-column: 3;
-    grid-row: 2;
+    grid-row: 2/ span 2;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr 1fr 3fr 1fr 3fr;
+    padding-left: 5px;
+    padding-top: 5px;
 }
+
+.trending-text{
+    grid-area: trending-text;
+    display: flex;
+    align-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 700;
+}
+   
 
 .sidebar-top{
     grid-row: 1;
@@ -275,8 +308,145 @@ color: rgba(40, 190, 175);
     grid-row: 2;
     font-family: Arial, Helvetica, sans-serif;
     color: grey;
-    padding-left: 5px;
 }
+
+
+
+.sidebar-mid{
+    grid-row: 3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.text2{
+    grid-row: 4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+.sidebar-bot{
+    grid-row: 5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.text3{
+    grid-row: 6;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+.trending{
+    grid-area: trending;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+    "p1 name1"
+    "p1 project1"
+    "p2 name2"
+    "p2 project2"
+    "p3 name3"
+    "p3 project3"
+    "p4 name4"
+    "p4 project4";
+
+}
+
+#p1{
+    grid-area: p1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name1{
+    grid-area: name1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.project1{
+    grid-area: project1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: grey;
+}
+
+
+#p2{
+    grid-area: p2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name2{
+    grid-area: name2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project2{
+    grid-area: project2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: grey;
+}
+
+
+#p3{
+    grid-area: p3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name3{
+    grid-area: name3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project3{
+    grid-area: project3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: grey;
+}
+
+
+#p4{
+    grid-area: p4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name4{
+    grid-area: name4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project4{
+    grid-area: project4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: grey;
+}
+
+
 
 
 
